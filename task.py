@@ -16,3 +16,11 @@ class Job:
         self.remaining_time = task.execution_time
         self.absolute_deadline = release_time + task.deadline
         self.completed = False
+        self.completion_time = None
+
+
+    @property
+    def response_time(self):
+        if self.completion_time is not None:
+            return self.completion_time - self.release_time
+        return None
