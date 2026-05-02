@@ -1,11 +1,12 @@
 # task.py
 
 class Task:
-    def __init__(self, name, period, execution_time, deadline):
+    def __init__(self, name, period, execution_time, deadline, priority="high"):
         self.name = name
         self.period = period
         self.execution_time = execution_time
         self.deadline = deadline
+        self.priority = priority
         self.next_release = 0
 
 
